@@ -8,10 +8,10 @@ def pascaluv_trojudelnik(pocet_radku):
   for i in range(pocet_radku + 1): #vytvoří požadovaný počet řádků
     for j in range(len(radek) - 2): # projde čísla na daném řádku (první a poslední je vždy "1" proto "-2" a taky aby fungovaly první dva řádky pyramidy)
       radek[j + 1] = radek_pomocna[j] + radek_pomocna[j + 1] # číslo v redek na pozici j+1 nahradí součtem j + (j+1) z radek_pomocna
-    print(" " * 3 * (pocet_radku - i),end="") # odsazení, aby vznikla pyramida
+    print("   " * (pocet_radku - i), end="") # odsazení, aby vznikla pyramida
     for k in radek:  #odsazení, aby byla čísla zarovnána pod sebou, postumně vytiskne všechyn prvky proměnné radek
       if k < 10:
-        print(k,"    ", end="")
+        print(k, end="     ")
       elif k < 100:
         print(k, end="    ")
       elif k < 1000:
